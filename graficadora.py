@@ -3,22 +3,19 @@ import matplotlib.pyplot as plt
 # Datos de ejemplo: tamaños de las listas y tiempos de ejecución en milisegundos
 tamanos       = [100, 500, 1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 20000, 30000, 40000, 50000, 60000, 70000, 80000, 90000, 100000]
 
-tiempo_python=[0.000000  ,8.008242  ,40.042877  ,245.861292  ,365.692854 ,625.041485 ,1001.970768 ,1348.403931 ,1801.948786 ,2331.801653 ,2961.230516 ,3705.792189 ,14472.521305 ,37933.972597 ,64972.810268 ,102058.926821 ,238778.150082 ,217463.900805 ,499143.781424 ,487710.291147 ,666407.685518]
-tiempo_Java=[0, 2, 1, 3, 6, 10, 22, 33, 58, 53, 99, 133, 565, 1270, 2186, 3264, 4813, 6795, 8688, 11393, 13677]
-tiempo_cpp=[0 ,0 ,7 ,15 ,56 ,120 ,157 ,224 ,304 ,409 ,467 ,561 ,2159 ,4728 ,8300 ,13348 ,19108 ,29591 ,36307 ,46004 ,57740]
+countin=[0.000000  ,0.000000  ,0.000000  ,0.000000  ,0.000000  ,0.000000  ,0.000000  ,0.000000  ,8.007050  ,0.000000  ,0.000000  ,0.000000  ,8.094072  ,0.000000  ,0.000000  ,3.120422  ,17.023563  ,9.999514  ,7.993460  ,16.206264  ,16.014814]
 
 # Crear la figura y los ejes
 plt.figure()
 
 # Graficar las líneas para Python y C++
-plt.plot(tamanos, tiempo_python, label='Python', color='blue')
-plt.plot(tamanos, tiempo_cpp, label='C++', color='orange')
-plt.plot(tamanos, tiempo_Java, label='java', color='red')
+plt.plot(tamanos, countin, color='yellow')
+
 
 # Añadir etiquetas de los ejes y el título
 plt.xlabel('Tamaño de la lista')
 plt.ylabel('Tiempo de ejecución (milisegundos)')
-plt.title('Comparaciones en Bubblesort')
+plt.title('Counting Sort en Python')
 
 # Mostrar leyenda
 plt.legend()
